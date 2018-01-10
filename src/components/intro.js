@@ -13,6 +13,9 @@ const Intro = props => (
 
 export default Intro;
 
+/*
+    Styles
+*/
 const Container = styled.section`
     height: 100vh;
     padding-top: 20px;

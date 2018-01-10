@@ -9,6 +9,9 @@ const SectionTitle = props => (
 
 export default SectionTitle
 
+/*
+    Styles
+*/
 const Title = styled.div`
     position: sticky;
     display: flex;

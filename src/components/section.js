@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Sticky from 'react-stickynode';
 
 import SectionTitle from './section-title';
+import Colors from './sections/colors';
 
 const getSection = (type, data) => {
     if (type === 'colors') {
-        return 'color component here';
+        return <Colors data={data} />;
     } else if (type === 'typography') {
         return 'typography component here';
     } else if (type === 'buttons') {
@@ -38,6 +39,9 @@ const Section = props => (
 
 export default Section;
 
+/*
+    Styles
+*/
 const Container = styled.section`
     min-height: 100vh;
 `;
