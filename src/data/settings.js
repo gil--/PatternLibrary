@@ -1,6 +1,7 @@
-export const data = {
+const data = {
     title: "Something Digital Pattern Library",
     version: "1.2.1",
+    url: "https://somethingdigital.com",
     sections: [
         {
             title: "Colors",
@@ -83,3 +84,5 @@ export const data = {
         }
     ]
 };
+
+export default data;
