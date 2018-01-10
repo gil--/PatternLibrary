@@ -1,21 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components';
+
+import data from '../data/settings';
+
+import SectionTitle from '../components/section-title';
+import Section from '../components/section';
+import Intro from '../components/intro';
 
 const IndexPage = () => (
   <div>
-    <h1>Bryant Park Pattern Library</h1>
-    <h2>Colors</h2>
-    <h2>Typography</h2>
-    <h2>Buttons &amp; Links</h2>
-    <h2>Icons</h2>
-    <h2>Favicon</h2>
-    <h2>Forms</h2>
-    <h2>Promobar</h2>
-    <h2>Breadcrumbs</h2>
-    <h2>Pagination</h2>
-    <h2>Accordions</h2>
-    <h2>Alerts</h2>
-    <h2>Image Placeholders</h2>
+    <Intro title="Bryant Park Pattern Library" version="v1.0" url="https://somethingdigital.com" />
+    <Section title="Colors" type="colors" />
+    <Section title="Typography" type="typography" />
+    <Section title="Buttons &amp; Links" type="buttons" />
+    <Section title="Icons" type="icons" />
+    <Section title="Favicon" type="favicon" />
+    <Section title="Forms" type="forms" />
+    <Section title="Promobar" type="block" />
+    <Section title="Breadcrumbs" type="block" />
+    <Section title="Pagination" type="block" />
+    <Section title="Accordions" type="block" />
+    <Section title="Alerts" type="block" />
+    <Section title="Image Placeholders" />
   </div>
 )
 
