@@ -5,7 +5,7 @@ const data = {
     sections: [
         {
             title: "Colors",
-            type: "color",
+            type: "colors",
             groups: [
                 {
                     group: "Base Theme Colors",
@@ -81,7 +81,161 @@ const data = {
                     ]
                 }
             ]
-        }
+        },
+        {
+            title: "Buttons",
+            type: "buttons",
+            groups: [
+                {
+                    group: "Buttons",
+                    options: [
+                        {
+                            title: "Primary",
+                            subtitle: "bluefoot? add to cart",
+                            properties: {
+                                color: "#000"
+                            }
+                        },
+                        {
+                            title: "Secondary",
+                            subtitle: "most places",
+                            properties: {
+                                color: "#fff0c3"
+                            }
+                        },
+                        {
+                            title: "Tertiary",
+                            subtitle: "account links?",
+                            properties: {
+                                color: "#ffda7d"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Icons",
+            type: "icons",
+            groups: [
+                {
+                    group: "Theme Icons",
+                    options: [
+                        {
+                            title: "Cart",
+                            id: "cart",
+                        },
+                        {
+                            title: "Account",
+                            id: "account",
+                        },
+                        {
+                            title: "Chevron Up",
+                            id: "chevron-up",
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Favicon",
+            type: "favicon",
+            groups: [
+                {
+                    group: "Favicon",
+                    options: [
+                        {
+                            title: "Favicon",
+                            id: "favicon",
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Forms",
+            type: "forms",
+            groups: [
+                {
+                    group: "Inputs",
+                    options: [
+                        {
+                            title: "Checkbox",
+                            id: "checkbox",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Promobar",
+            type: "block",
+            groups: [
+                {
+                    group: "Promo Bar",
+                    options: [
+                        {
+                            title: "Black",
+                            properties: {
+                                color: "#000"
+                            }
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Breadcrumbs",
+            type: "block",
+            html: "",
+            properties: {
+                color: "#000"
+            }
+        },
+        {
+            title: "Pagination",
+            type: "block",
+            html: "",
+            properties: {
+                color: "#000"
+            }
+        },
+        {
+            title: "Accordions",
+            type: "block",
+            groups: [
+                {
+                    group: "Accordion",
+                    options: [
+                        {
+                            title: "General Accordion",
+                            html: "",
+                            properties: {
+                                color: "#000"
+                            }
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Alerts",
+            type: "block",
+            groups: [
+                {
+                    group: "Alerts",
+                    options: [
+                        {
+                            title: "Sucess",
+                            html: "",
+                            properties: {
+                                color: "#000"
+                            }
+                        },
+                    ]
+                }
+            ]
+        },
     ]
 };
 

@@ -8,21 +8,17 @@ import SectionTitle from '../components/section-title';
 import Section from '../components/section';
 import Intro from '../components/intro';
 
+const getSections = () => {
+  return data.sections.map((section) =>
+    <Section title={section.title} type={section.type} data={section.groups} />
+  );
+}
+
 const IndexPage = () => (
   <div>
-    <Intro title="Bryant Park Pattern Library" version="v1.0" url="https://somethingdigital.com" />
-    <Section title="Colors" type="colors" />
-    <Section title="Typography" type="typography" />
-    <Section title="Buttons &amp; Links" type="buttons" />
-    <Section title="Icons" type="icons" />
-    <Section title="Favicon" type="favicon" />
-    <Section title="Forms" type="forms" />
-    <Section title="Promobar" type="block" />
-    <Section title="Breadcrumbs" type="block" />
-    <Section title="Pagination" type="block" />
-    <Section title="Accordions" type="block" />
-    <Section title="Alerts" type="block" />
-    <Section title="Image Placeholders" />
+    <Intro title={data.title} version={data.version} url={data.url} />
+    {getSections()}
+    <Section title="Image Placeholders" data={data} />
   </div>
 )
 
