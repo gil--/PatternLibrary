@@ -47,7 +47,7 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
-    max-width: 960px;
+    max-width: 1060px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
