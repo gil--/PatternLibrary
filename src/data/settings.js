@@ -8,14 +8,8 @@ const data = {
             type: "colors",
             groups: [
                 {
-                    group: "Base Theme Colors",
+                    title: "Base Theme Colors",
                     options: [
-                        {
-                            title: "Black",
-                            properties: {
-                                color: "#000"
-                            }
-                        },
                         {
                             title: "Basenji",
                             subtitle: "Promo Banner",
@@ -29,7 +23,108 @@ const data = {
                             properties: {
                                 color: "#ffda7d"
                             }
-                        }
+                        },
+                        {
+                            title: "Golden Doodle",
+                            subtitle: "link hover underline, checkbox/radio fill, back to top button, button hovers",
+                            properties: {
+                                color: "#ffcc52"
+                            }
+                        },
+                        {
+                            title: "Irish Wolfhound",
+                            subtitle: "Primary Button Text, +/- icons",
+                            properties: {
+                                color: "#615d59"
+                            }
+                        },
+                        {
+                            title: "Siberian Husky",
+                            properties: {
+                                color: "#b0aeac"
+                            }
+                        },
+                        {
+                            title: "Australian Cattle Dog",
+                            subtitle: "Header Borders",
+                            properties: {
+                                color: "#e7e7e5"
+                            }
+                        },
+                        {
+                            title: "Redbone Coonhound",
+                            properties: {
+                                color: "#cb4f53"
+                            }
+                        },
+                        {
+                            title: "Teacup Poodle",
+                            properties: {
+                                color: "#e3737d"
+                            }
+                        },
+                        {
+                            title: "Chow Chow",
+                            properties: {
+                                color: "#b6577c"
+                            }
+                        },
+                        {
+                            title: "Bull Terrier",
+                            properties: {
+                                color: "#ffffff"
+                            }
+                        },
+                        {
+                            title: "Greyhound",
+                            subtitle: "Menu Container Borders",
+                            properties: {
+                                color: "#dddddd"
+                            }
+                        },
+                        {
+                            title: "Cocker Spaniel",
+                            subtitle: "Menu Container Fills",
+                            properties: {
+                                color: "#fffcf3"
+                            }
+                        },
+                        {
+                            title: "Golden Retriever",
+                            subtitle: "Success Alerts (default)",
+                            properties: {
+                                color: "#006400"
+                            }
+                        },
+                        {
+                            title: "Doberman Pincher",
+                            subtitle: "Error Alerts (default)",
+                            subtitl: "e02b27",
+                            properties: {
+                                color: "#e02b27"
+                            }
+                        },
+                        {
+                            title: "Pocket Beagle",
+                            subtitle: "General Alert Text Color (default)",
+                            properties: {
+                                color: "#6f4400"
+                            }
+                        },
+                        {
+                            title: "Vizsla",
+                            subtitle: "General Alert background color (default)",
+                            properties: {
+                                color: "#fdf0d5"
+                            }
+                        },
+                        {
+                            title: "Weimaraner",
+                            subtitle: "Form Border Color (default)",
+                            properties: {
+                                color: "#c2c2c2"
+                            }
+                        },
                     ]
                 }
             ]
@@ -39,7 +134,7 @@ const data = {
             type: "typography",
             groups: [
                 {
-                    group: "Headings",
+                    title: "Headings",
                     options: [
                         {
                             title: "H1",
@@ -68,7 +163,7 @@ const data = {
                     ]
                 },
                 {
-                    group: "Body",
+                    title: "Body",
                     options: [
                         {
                             title: "Body",
@@ -87,7 +182,7 @@ const data = {
             type: "buttons",
             groups: [
                 {
-                    group: "Buttons",
+                    title: "Buttons",
                     options: [
                         {
                             title: "Primary",
@@ -119,7 +214,7 @@ const data = {
             type: "icons",
             groups: [
                 {
-                    group: "Theme Icons",
+                    title: "Theme Icons",
                     options: [
                         {
                             title: "Cart",
@@ -142,7 +237,7 @@ const data = {
             type: "favicon",
             groups: [
                 {
-                    group: "Favicon",
+                    title: "Favicon",
                     options: [
                         {
                             title: "Favicon",
@@ -157,7 +252,7 @@ const data = {
             type: "forms",
             groups: [
                 {
-                    group: "Inputs",
+                    title: "Inputs",
                     options: [
                         {
                             title: "Checkbox",
@@ -172,7 +267,7 @@ const data = {
             type: "block",
             groups: [
                 {
-                    group: "Promo Bar",
+                    title: "Promo Bar",
                     options: [
                         {
                             title: "Black",
@@ -205,7 +300,7 @@ const data = {
             type: "block",
             groups: [
                 {
-                    group: "Accordion",
+                    title: "Accordion",
                     options: [
                         {
                             title: "General Accordion",
@@ -223,7 +318,7 @@ const data = {
             type: "block",
             groups: [
                 {
-                    group: "Alerts",
+                    title: "Alerts",
                     options: [
                         {
                             title: "Sucess",
