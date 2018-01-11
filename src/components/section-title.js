@@ -13,7 +13,7 @@ export default SectionTitle
     Styles
 */
 const Title = styled.div`
-    position: sticky;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +22,7 @@ const Title = styled.div`
     text-align: center;
     text-transform: uppercase;
     background-color: var(--backgroundColor);
+    z-index: 5;
 
     h2 {
         margin: 0;
