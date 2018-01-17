@@ -26,7 +26,7 @@ const getSection = (type, data) => {
 const Section = props => (
     <Container>
         { props.title ?
-            <Sticky enabled={true} top={0}>
+            <Sticky enabled={false} top={0}>
                 <SectionTitle title={props.title} />
             </Sticky>
         : '' }
@@ -51,5 +51,4 @@ const Content = styled.div`
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center;
 `;
