@@ -2,11 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 
 import GroupTitle from '../group-title';
+import VariableList from '../variable-list';
+
+const colorVars = [];
 
 const getColors = (data) => {
     return data.map((group) =>
         <div>
             <GroupTitle title={group.title} />
+            <VariableList variables={colorVars} />
             <ColorList>
                 {getColor(group.options)}
             </ColorList>
@@ -15,15 +19,22 @@ const getColors = (data) => {
 }
 
 const getColor = (data) => {
-    return data.map((color) =>
-        <Color>
-            <ColorFill color={color.properties.color}>
-                <Hex color={color.properties.color}>{color.properties.color}</Hex>
-            </ColorFill>
-            <ColorName>{color.title}</ColorName>
-            <ColorUsage>{color.subtitle}</ColorUsage>
-        </Color>
-    );
+    return data.map((color) => {
+        colorVars.push({
+            name: '$c-' + color.title.replace(/\s+/g, '-').toLowerCase(),
+            value: color.properties.color,
+        });
+
+        return (
+            <Color>
+                <ColorFill color={color.properties.color}>
+                    <Hex color={color.properties.color}>{color.properties.color}</Hex>
+                </ColorFill>
+                <ColorName>{color.title}</ColorName>
+                <ColorUsage>{color.subtitle}</ColorUsage>
+            </Color>
+        );
+    });
 }
 
 const Colors = props => (
@@ -39,9 +50,9 @@ export default Colors;
 */
 const ColorList = styled.ul`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin: 0;
     list-style: none;
 `;
 
@@ -91,11 +102,8 @@ const Hex = styled.div`
     letter-spacing: 1px;
     font-weight: bold;
     font-family: Helevetica, Sans-Serif;
+    color: ${props => props.color};
     background: white;
     outline: 3px solid white;
     outline-offset: 2px;
-
-    &:hover {
-        color: ${props => props.color};
-    }
 `;
