@@ -23,6 +23,7 @@ const Container = styled.section`
 `;
 
 const Content = styled.div`
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,5 +34,36 @@ const Content = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    background-color: var(--backgroundColor);
+    /* background-color: var(--backgroundColor); */
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background: #e5e76c;
+        right: 10%;
+        top: 25%;
+        z-index: -1;
+        pointer-events: none;
+        outline-offset: -40px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        pointer-events: none;
+        outline: 10px solid #f06212;
+        outline-offset: -40px;
+    }
+
+    h1 {
+        mix-blend-mode: difference;
+        color: #ff761e;
+    }
 `;
