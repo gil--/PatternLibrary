@@ -7,6 +7,7 @@
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "react-accessible-accordion": "^1.0.2",
     "react-prism": "^4.3.2",
     "react-stickynode": "^1.4.0",
     "react-syntax-highlighter": "^6.1.1",
