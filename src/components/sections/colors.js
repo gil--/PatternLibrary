@@ -1,47 +1,78 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 
 import GroupTitle from '../group-title';
 import VariableList from '../variable-list';
 
 const colorVars = [];
 
-const getColors = (data) => {
-    return data.map((group) =>
-        <div>
-            <GroupTitle title={group.title} />
-            <VariableList variables={colorVars} />
-            <ColorList>
-                {getColor(group.options)}
-            </ColorList>
-        </div>
-    );
-}
+class Colors extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            colorVariables: []
+        };
+    }
 
-const getColor = (data) => {
-    return data.map((color) => {
-        colorVars.push({
-            name: '$c-' + color.title.replace(/\s+/g, '-').toLowerCase(),
-            value: color.properties.color,
+    componentWillMount() {
+       this.setColorVariables(this.props.data);
+    }
+
+    setColorVariables(data) {
+        let colors = [];
+
+        data.map((group, index) => {
+            colors[index] = [];
+
+            group.options.map((color) => {
+                const colorName = color.title.replace(/\s+/g, '-').toLowerCase();
+
+                colors[index].push({
+                    name: `$c-${colorName}`,
+                    value: color.properties.color
+                });
+
+                document.documentElement.style.setProperty(`--${colorName}`, color.properties.color);
+            });
         });
 
-        return (
-            <Color>
-                <ColorFill color={color.properties.color}>
-                    <Hex color={color.properties.color}>{color.properties.color}</Hex>
-                </ColorFill>
-                <ColorName>{color.title}</ColorName>
-                <ColorUsage>{color.subtitle}</ColorUsage>
-            </Color>
-        );
-    });
-}
+        this.setState({ colorVariables: colors });
+    }
 
-const Colors = props => (
-    <div>
-        {getColors(props.data)}
-    </div>
-)
+    getColors(data) {
+        return data.map((group, index) =>
+            <div>
+                <GroupTitle title={group.title} />
+                <VariableList variables={this.state.colorVariables[index]} />
+                <ColorList>
+                    {this.getColor(group.options)}
+                </ColorList>
+            </div>
+        );
+    }
+
+    getColor(data) {
+        return data.map((color) => {
+            return (
+                <Color>
+                    <ColorFill color={color.properties.color}>
+                        <Hex color={color.properties.color}>{color.properties.color}</Hex>
+                    </ColorFill>
+                    <ColorName>{color.title}</ColorName>
+                    <ColorUsage>{color.subtitle}</ColorUsage>
+                </Color>
+            );
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                {this.getColors(this.props.data)}
+            </div>
+        )
+    }
+}
 
 export default Colors;
 
