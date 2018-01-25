@@ -8,7 +8,7 @@ const data = {
             type: "colors",
             groups: [
                 {
-                    title: "Base Theme Colors",
+                    title: "Theme Colors (Color Palette)",
                     options: [
                         {
                             title: "Basenji",
@@ -126,7 +126,26 @@ const data = {
                             }
                         },
                     ]
-                }
+                },
+                {
+                    title: "Base Colors",
+                    options: [
+                        {
+                            title: "Primary",
+                            subtitle: "",
+                            properties: {
+                                color: "var(--basenji)"
+                            }
+                        },
+                        {
+                            title: "Secondary",
+                            subtitle: "",
+                            properties: {
+                                color: "var(--labrador)"
+                            }
+                        }
+                    ]
+                },
             ]
         },
         {
