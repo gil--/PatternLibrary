@@ -32,7 +32,9 @@ class Colors extends React.Component {
                     value: color.properties.color
                 });
 
-                document.documentElement.style.setProperty(`--${colorName}`, color.properties.color);
+                if (typeof document !== "undefined") {
+                    document.documentElement.style.setProperty(`--${colorName}`, color.properties.color);
+                }
             });
         });
 
