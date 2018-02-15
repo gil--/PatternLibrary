@@ -1,7 +1,18 @@
 const data = {
-    title: "Something Digital Pattern Library",
-    version: "1.2.1",
-    url: "https://somethingdigital.com",
+    title: "Theme Styleguide",
+    version: "1.0.0",
+    url: "#",
+    favicon: "logo-32x32.png",
+    resources: [
+        {
+            type: 'stylesheet',
+            src: process.env.GATSBY_MAIN_STYLESHEET,
+        },
+        {
+            type: 'stylesheet',
+            src: 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700',
+        },
+    ],
     sections: [
         {
             title: "Colors",
@@ -11,118 +22,109 @@ const data = {
                     title: "Theme Colors (Color Palette)",
                     options: [
                         {
-                            title: "Basenji",
-                            subtitle: "Promo Banner",
+                            title: "Mine Shaft",
+                            subtitle: "Typography",
                             properties: {
-                                color: "#fff0c3"
+                                color: "#333333"
                             }
                         },
                         {
-                            title: "Labrador",
-                            subtitle: "Mobile Menu Tabs",
+                            title: "Shark",
+                            subtitle: "Icons, Promo Banner, Inactive Menu Tabs, Tertiary Buttons",
                             properties: {
-                                color: "#ffda7d"
+                                color: "#282b30"
                             }
                         },
                         {
-                            title: "Golden Doodle",
-                            subtitle: "link hover underline, checkbox/radio fill, back to top button, button hovers",
+                            title: "Abbey",
+                            subtitle: "Testimonial Containers",
                             properties: {
-                                color: "#ffcc52"
+                                color: "#45474b"
                             }
                         },
                         {
-                            title: "Irish Wolfhound",
-                            subtitle: "Primary Button Text, +/- icons",
+                            title: "Alabaster",
+                            subtitle: "Container Fills",
                             properties: {
-                                color: "#615d59"
+                                color: "#fafafa"
                             }
                         },
                         {
-                            title: "Siberian Husky",
+                            title: "Mercury",
+                            subtitle: "Borders",
                             properties: {
-                                color: "#b0aeac"
+                                color: "#e6e6e6"
                             }
                         },
                         {
-                            title: "Australian Cattle Dog",
-                            subtitle: "Header Borders",
+                            title: "Valencia",
+                            subtitle: "Primary Button",
                             properties: {
-                                color: "#e7e7e5"
+                                color: "#d43238"
                             }
                         },
                         {
-                            title: "Redbone Coonhound",
+                            title: "Bright Red",
+                            subtitle: "Primary button hover and border",
                             properties: {
-                                color: "#cb4f53"
+                                color: "#b00000"
                             }
                         },
                         {
-                            title: "Teacup Poodle",
+                            title: "Crimson",
+                            subtitle: "Selected radio button and checkbox fills",
                             properties: {
-                                color: "#e3737d"
+                                color: "#ea252e"
                             }
                         },
                         {
-                            title: "Chow Chow",
+                            title: "Nevada",
+                            subtitle: "Secondary button hover and border",
                             properties: {
-                                color: "#b6577c"
+                                color: "#6c6d70"
                             }
                         },
                         {
-                            title: "Bull Terrier",
+                            title: "Porcelain",
+                            subtitle: "Flyout Fills",
                             properties: {
-                                color: "#ffffff"
+                                color: "#f0f1f2"
                             }
                         },
                         {
-                            title: "Greyhound",
-                            subtitle: "Menu Container Borders",
-                            properties: {
-                                color: "#dddddd"
-                            }
-                        },
-                        {
-                            title: "Cocker Spaniel",
-                            subtitle: "Menu Container Fills",
-                            properties: {
-                                color: "#fffcf3"
-                            }
-                        },
-                        {
-                            title: "Golden Retriever",
-                            subtitle: "Success Alerts (default)",
+                            title: "Green",
+                            subtitle: "Success Alerts",
                             properties: {
                                 color: "#006400"
                             }
                         },
                         {
-                            title: "Doberman Pincher",
-                            subtitle: "Error Alerts (default)",
-                            subtitl: "e02b27",
+                            title: "Alert",
+                            subtitle: "Error and Validation",
                             properties: {
-                                color: "#e02b27"
+                                color: "#e02B27"
                             }
                         },
                         {
-                            title: "Pocket Beagle",
+                            title: "Brown",
                             subtitle: "General Alert Text Color (default)",
                             properties: {
                                 color: "#6f4400"
                             }
                         },
                         {
-                            title: "Vizsla",
-                            subtitle: "General Alert background color (default)",
+                            title: "Silver",
+                            subtitle: "Form Border Color (default)",
+                            subtitl: "e02b27",
                             properties: {
-                                color: "#fdf0d5"
+                                color: "#c2c2c2"
                             }
                         },
                         {
-                            title: "Weimaraner",
-                            subtitle: "Form Border Color (default)",
+                            title: "Yellow",
+                            subtitle: "General Alert background color (default)",
                             properties: {
-                                color: "#c2c2c2"
+                                color: "#fdf0d5"
                             }
                         },
                     ]
@@ -132,18 +134,52 @@ const data = {
                     options: [
                         {
                             title: "Primary",
-                            subtitle: "",
                             properties: {
-                                color: "var(--basenji)"
+                                color: "var(--color-primary)"
                             }
                         },
                         {
                             title: "Secondary",
-                            subtitle: "",
                             properties: {
-                                color: "var(--labrador)"
+                                color: "var(--color-secondary)"
                             }
-                        }
+                        },
+                        {
+                            title: "Light Gray",
+                            properties: {
+                                color: "var(--color-light-grey)"
+                            }
+                        },
+                        {
+                            title: "Medium Gray",
+                            properties: {
+                                color: "var(--color-medium-grey)"
+                            }
+                        },
+                        {
+                            title: "Dark Gray",
+                            properties: {
+                                color: "var(--color-dark-grey)"
+                            }
+                        },
+                        {
+                            title: "Default Borders",
+                            properties: {
+                                color: "var(--color-border)"
+                            }
+                        },
+                        {
+                            title: "Form Input Border",
+                            properties: {
+                                color: ""
+                            }
+                        },
+                        {
+                            title: "Text Color",
+                            properties: {
+                                color: "var(--text-color)"
+                            }
+                        },
                     ]
                 },
             ]
@@ -157,26 +193,115 @@ const data = {
                     options: [
                         {
                             title: "H1",
-                            html: "<h1>This is an H1</h1>",
+                            subtitle: "Page Title",
+                            html: "This is an H1",
                             properties: {
-                                'font-size': "22px",
-                                'font-size--desktop': "24px"
+                                'font-family': "var(--h1-font-family)",
+                                'font-size': "var(--h1-font-size)",
+                                'font-size--desktop': "var(--h1-font-size-desktop)",
+                                'line-height': "var(--h1-line-height)",
+                                'line-height--desktop': "var(--h1-line-height-desktop)",
+                                'letter-spacing': "var(--h1-letter-spacing)",
+                                'letter-spacing--desktop': "var(--h1-letter-spacing-desktop)",
+                                'font-weight': "var(--h1-font-weight)",
+                                'color': 'var(--color-text)',
                             }
                         },
                         {
                             title: "H1",
-                            html: "<h1>This is a PDP H1</h1>",
+                            subtitle: "Page title on product detail page",
+                            class: "page-title product",
+                            html: `This is a PDP H1`,
                             properties: {
-                                'font-size': "22px",
-                                'font-size--desktop': "24px"
+                                'font-family': "var(--h1-font-family)",
+                                'font-size': "var(--product-title-font-size)",
+                                'font-size--desktop': "var(--product-title-font-size-desktop)",
+                                'line-height': "var(--product-title-line-height)",
+                                'line-height--desktop': "var(--product-title-line-height-desktop)",
+                                'letter-spacing': "var(--product-title-letter-spacing)",
+                                'letter-spacing--desktop': "var(--product-title-letter-spacing-desktop)",
+                                'font-weight': "var(--product-title-font-weight)",
+                                'color': 'var(--color-text)',
                             }
                         },
                         {
                             title: "H2",
-                            html: "<h2>This is an H2</h2>",
+                            subtitle: "Checkout Subtitles, CMS Subtitles, Account Subtitles",
+                            html: "This is an H2",
                             properties: {
-                                'font-size': "16px",
-                                'font-size--desktop': "18px"
+                                'font-family': "var(--h2-font-family)",
+                                'font-size': "var(--h2-font-size)",
+                                'font-size--desktop': "var(--h2-font-size-desktop)",
+                                'line-height': "var(--h2-line-height)",
+                                'line-height--desktop': "var(--h2-line-height-desktop)",
+                                'letter-spacing': "var(--h2-letter-spacing)",
+                                'letter-spacing--desktop': "var(--h2-letter-spacing-desktop)",
+                                'font-weight': "var(--h2-font-weight)",
+                                'color': 'var(--color-text)',
+                            }
+                        },
+                        {
+                            title: "H3",
+                            subtitle: "Category Filter headline",
+                            html: "This is an H3",
+                            properties: {
+                                'font-family': "var(--h3-font-family)",
+                                'font-size': "var(--h3-font-size)",
+                                'font-size--desktop': "var(--h3-font-size-desktop)",
+                                'line-height': "var(--h3-line-height)",
+                                'line-height--desktop': "var(--h3-line-height-desktop)",
+                                'letter-spacing': "var(--h3-letter-spacing)",
+                                'letter-spacing--desktop': "var(--h3-letter-spacing-desktop)",
+                                'font-weight': "var(--h3-font-weight)",
+                                'color': 'var(--color-text)',
+                            }
+                        },
+                        {
+                            title: "H4",
+                            subtitle: "Account Tertiary Titles, Cart and Checkout Summary Tertiary titles, Related products/Cross-sell/Upsell titles",
+                            html: "This is an H4",
+                            properties: {
+                                'font-family': "var(--h4-font-family)",
+                                'font-size': "var(--h4-font-size)",
+                                'font-size--desktop': "var(--h4-font-size-desktop)",
+                                'line-height': "var(--h4-line-height)",
+                                'line-height--desktop': "var(--h4-line-height-desktop)",
+                                'letter-spacing': "var(--h4-letter-spacing)",
+                                'letter-spacing--desktop': "var(--h4-letter-spacing-desktop)",
+                                'font-weight': "var(--h4-font-weight)",
+                                'color': 'var(--color-text)',
+                            }
+                        },
+                        {
+                            title: "H5",
+                            subtitle: "Navigation, Accordion Title",
+                            html: "This is an H5",
+                            properties: {
+                                'font-family': "var(--h5-font-family)",
+                                'font-size': "var(--h5-font-size)",
+                                'font-size--desktop': "var(--h5-font-size-desktop)",
+                                'line-height': "var(--h5-line-height)",
+                                'line-height--desktop': "var(--h5-line-height-desktop)",
+                                'letter-spacing': "var(--h5-letter-spacing)",
+                                'letter-spacing--desktop': "var(--h5-letter-spacing-desktop)",
+                                'font-weight': "var(--h5-font-weight)",
+                                'color': 'var(--color-text)',
+                            }
+                        },
+                        {
+                            title: "H6",
+                            subtitle: "Generic h6",
+                            html: "This is an H6",
+                            properties: {
+                                'font-family': "var(--h6-font-family)",
+                                'font-size': "var(--h6-font-size)",
+                                'font-size--desktop': "var(--h6-font-size-desktop)",
+                                'line-height': "var(--h6-line-height)",
+                                'line-height--desktop': "var(--h6-line-height-desktop)",
+                                'letter-spacing': "var(--h6-letter-spacing)",
+                                'letter-spacing--desktop': "var(--h6-letter-spacing-desktop)",
+                                'font-weight': "var(--h6-font-weight)",
+                                'color': 'var(--color-text)',
                             }
                         }
                     ]
@@ -186,10 +311,16 @@ const data = {
                     options: [
                         {
                             title: "Body",
-                            html: "<p>Whether it's singing them to sleep and gently kissing their forhead to show signs of love, or cuddling after a bump on the head, being a parent never feels easy, but it always feels like the best thing you've ever done.</p><p><a href=\"#\">Burt's Bees Baby</a> can help. We are committed to delivering you the best <a href=\"#\">organic product</a> on the market, at prices you can afford.</p>",
+                            html: `<p>MidAtlantic Orthodontics is a family owned company with a culture that derives directly from our core values. These <a href="#">core values</a> are what drive out policies and business practices. they are the foundation of our relationships with our customers and, in turn, the community that we are all <a href="#">contributing</a> member towards. Since 1994, these principles have served to make MidAtlantic Orthodontics the reputable, full service provider of quality products and services we have been known for, and is consistent with the vision Mr. Tony Prusich had when starting the company.</p>`,
                             properties: {
-                                'font-size': "22px",
-                                'font-size--desktop': "24px"
+                                'font-size': 'var(--font-size)',
+                                'font-size--desktop': 'var(--font-size-desktop)',
+                                'line-height': 'var(--line-height)',
+                                'line-height--desktop': 'var(--line-height-desktop)',
+                                'letter-spacing': 'var(--letter-spacing)',
+                                'letter-spacing--desktop': 'var(--letter-spacing-desktop)',
+                                'font-family': 'var(--font-family)',
+                                'color': 'var(--color-text)',
                             }
                         }
                     ]
@@ -198,39 +329,47 @@ const data = {
         },
         {
             title: "Buttons",
-            type: "buttons",
+            type: "block",
             groups: [
                 {
-                    title: "Buttons",
-                    options: [
-                        {
-                            title: "Primary",
-                            subtitle: "bluefoot? add to cart",
-                            properties: {
-                                color: "#000"
-                            }
-                        },
-                        {
-                            title: "Secondary",
-                            subtitle: "most places",
-                            properties: {
-                                color: "#fff0c3"
-                            }
-                        },
-                        {
-                            title: "Tertiary",
-                            subtitle: "account links?",
-                            properties: {
-                                color: "#ffda7d"
-                            }
-                        }
-                    ]
-                }
+                    title: "Primary Button",
+                    html: `
+                        <button class="action primary" type="submit">Primary CTA</button>
+                        <button class="action primary" type="submit" disabled>Disabled Primary CTA</button>
+                    `,
+                },
+                {
+                    title: "Secondary Button",
+                    html: `
+                        <button type="submit">Secondary CTA</button>
+                        <button type="submit" disabled>Disabled Secondary CTA</button>
+                    `,
+                },
+                {
+                    title: "Tertiary Button",
+                    html: `
+                        <a class="abs-action-link-button" href="#">Special tertiary link</a>
+                    `,
+                },
+                {
+                    title: "Invisible Button",
+                    html: `
+                        <button type="submit" class="button--transparent">Transparent button</button>
+                    `,
+                },
+                {
+                    title: "Anchor Link",
+                    subtitle: "Just Your Average Link",
+                    html: `
+                        <a  href="#"">A regular link</a>
+                    `,
+                },
             ]
         },
         {
             title: "Icons",
             type: "icons",
+            source: "https://midatlanticortho2.test",
             groups: [
                 {
                     title: "Theme Icons",
@@ -240,38 +379,156 @@ const data = {
                             id: "cart",
                         },
                         {
-                            title: "Account",
-                            id: "account",
+                            title: "Search",
+                            id: "search",
+                        },
+                        {
+                            title: "Facebook",
+                            id: "facebook",
+                        },
+                        {
+                            title: "Twitter",
+                            id: "twitter",
+                        },
+                        {
+                            title: "LinkedIn",
+                            id: "linkedin",
+                        },
+                        {
+                            title: "Instagram",
+                            id: "instagram",
+                        },
+                        {
+                            title: "Youtube",
+                            id: "youtube",
                         },
                         {
                             title: "Chevron Up",
-                            id: "chevron-up",
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            title: "Favicon",
-            type: "favicon",
-            groups: [
-                {
-                    title: "Favicon",
-                    options: [
+                            id: "up",
+                        },
                         {
-                            title: "Favicon",
-                            id: "favicon",
-                        }
+                            title: "Chevron Down",
+                            id: "down",
+                        },
+                        {
+                            title: "Plus",
+                            id: "expand",
+                        },
+                        {
+                            title: "Minus",
+                            id: "collapse",
+                        },
+                        {
+                            title: "Close",
+                            id: "remove",
+                        },
+                        {
+                            title: "MAO Logo Icon",
+                            id: "mao",
+                        },
                     ]
                 }
             ]
         },
         {
             title: "Forms",
-            type: "forms",
+            type: "block",
             groups: [
                 {
-                    title: "Inputs",
+                    title: "Custom Checkbox",
+                    html: `
+                        <div>
+                            <input id="check1" type="checkbox" checked="checked" />
+                            <label for="check1">Checked Checkbox</label>
+                        </div>
+
+                        <div>
+                            <input id="check2" type="checkbox" />
+                            <label for="check2">Unchecked Checkbox</label>
+                        </div>
+
+                        <div>
+                            <input id="check3" type="checkbox" disabled="disabled" />
+                            <label for="check3">Disabled Unchecked Checkbox</label>
+                        </div>
+
+                        <div>
+                            <input id="check4" type="checkbox" disabled="disabled" checked="checked" />
+                            <label for="check4">Disabled Checked Checkbox</label>
+                        </div>
+                    `,
+                },
+                {
+                    title: "Custom Radio",
+                    html: `
+                        <div>
+                            <input id="radio1" type="radio" checked="checked" />
+                            <label for="radio1">Checked Radio</label>
+                        </div>
+
+                        <div>
+                            <input id="radio2" type="radio" />
+                            <label for="radio2">Unchecked Radio</label>
+                        </div>
+
+                        <div>
+                            <input id="radio3" type="radio" disabled="disabled" />
+                            <label for="radio3">Disabled Unchecked Radio</label>
+                        </div>
+
+                        <div>
+                            <input id="radio4" type="radio" disabled="disabled" checked="checked" />
+                            <label for="radio4">Disabled Checked Radio</label>
+                        </div>
+                    `,
+                },
+                {
+                    title: "Select",
+                    html: `
+                        <div class="custom-select">
+                            <select>
+                                <option value="" disabled selected hidden>Choose your option</option>
+                                <option>Dos</option>
+                                <option>Tres</option>
+                                <option>Cuatro</option>
+                                <option>Cinco - A very long option name to test wrapping</option>
+                            </select>
+                        </div>
+                    `,
+                },
+                {
+                    title: "Login Form Example",
+                    html: `
+                        <form class="form">
+                            <fieldset class="fieldset" data-hasrequired="* Required Fields">
+                                <div class="field required">
+                                    <label class="label" for="email"><span>Email</span></label>
+                                    <div class="control">
+                                        <input name="login[username]" value="" autofocus="" autocomplete="off" id="email" class="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true" type="email">
+                                    </div>
+                                </div>
+                                <div class="field required">
+                                    <label for="pass" class="label"><span>Password</span></label>
+                                    <div class="control">
+                                        <input name="login[password]" autocomplete="off" class="input-text" id="pass" title="Password" data-validate="{required:true}" aria-required="true" type="password">
+                                    </div>
+                                </div>
+                                <div class="actions-toolbar">
+                                    <div class="primary"><button type="submit" class="action login primary" name="send" id="send2"><span>Sign In</span></button></div>
+                                    <div class="secondary"><a class="action" href="#"><span>Forgot Your Password?</span></a></div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    `
+                }
+            ]
+        },
+        {
+            title: "Tables",
+            type: "block",
+            groups: [
+                {
+                    title: "Regular",
                     options: [
                         {
                             title: "Checkbox",
@@ -282,53 +539,24 @@ const data = {
             ]
         },
         {
-            title: "Promobar",
-            type: "block",
-            groups: [
-                {
-                    title: "Promo Bar",
-                    options: [
-                        {
-                            title: "Black",
-                            properties: {
-                                color: "#000"
-                            }
-                        },
-                    ]
-                }
-            ]
-        },
-        {
             title: "Breadcrumbs",
             type: "block",
-            html: "",
-            properties: {
-                color: "#000"
-            }
-        },
-        {
-            title: "Pagination",
-            type: "block",
-            html: "",
-            properties: {
-                color: "#000"
-            }
-        },
-        {
-            title: "Accordions",
-            type: "block",
             groups: [
                 {
-                    title: "Accordion",
-                    options: [
-                        {
-                            title: "General Accordion",
-                            html: "",
-                            properties: {
-                                color: "#000"
-                            }
-                        },
-                    ]
+                    title: "Breadcrumbs",
+                    html: `
+                        <div class="breadcrumbs">
+                            <ul class="items">
+                                <li class="item home">
+                                    <a href="#" title="Go to Home Page">Home</a>
+                                </li>
+                                <li class="item category43"><strong>Furniture</strong></li>
+                            </ul>
+                        </div>
+                    `,
+                    properties: {
+                        color: "#000"
+                    }
                 }
             ]
         },
@@ -337,18 +565,136 @@ const data = {
             type: "block",
             groups: [
                 {
-                    title: "Alerts",
-                    options: [
-                        {
-                            title: "Sucess",
-                            html: "",
-                            properties: {
-                                color: "#000"
-                            }
-                        },
-                    ]
+                    title: "Success Alert",
+                    html: `
+                        <div class="messages">
+                            <div class="message success">
+                                <div>
+                                    Brilliant mate! Job well <a href="#">done</a>. Smashing success:  !important;
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    properties: {
+                        color: "#000"
+                    }
+                },
+                {
+                    title: "Error Alert",
+                    html: `
+                        <div class="messages">
+                            <div class="message error">
+                                <div>
+                                    Dangerrrrr <a href="#">zone</a>. You're now entering the danger zone!
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    properties: {
+                        color: "#000"
+                    }
+                },
+                {
+                    title: "Warning Alert",
+                    html: `
+                        <div class="messages">
+                            <div class="message warning">
+                                <div>
+                                    Lorem ipsum dolor sit <a href="#">amet</a>, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    properties: {
+                        color: "#000"
+                    }
+                },
+                {
+                    title: "Double Stacked Alerts",
+                    html: `
+                        <div class="messages">
+                            <div class="message error">
+                                <div>
+                                    Lorem ipsum dolor sit <a href="#">amet</a>, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                </div>
+                            </div>
+                            <div class="message success">
+                                <div>
+                                    Lorem ipsum dolor sit <a href="#">amet</a>, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    properties: {
+                        color: "#000"
+                    }
                 }
             ]
+        },
+        {
+            title: "Promobar",
+            type: "block",
+            fullbleed: true,
+            groups: [
+                {
+                    title: "Promo Bar",
+                    html: `
+                        <div class="promobar js-animate">
+                            <div class="container">
+                                FREE SHIPPING ON ALL ORDERS $50+ AND FREE RETURNS
+                                <a href="#"><strong>SHOP NOW</strong></a>
+                                <button class="promobar__close" type="button"></button>
+                            </div>
+                        </div>
+                    `,
+                    properties: {
+                        color: "#000"
+                    }
+                }
+            ]
+        },
+        {
+            title: "Pagination",
+            type: "block",
+            groups: [
+                {
+                    title: 'Pagination',
+                    html: `
+                    <div class="toolbar-wrapper">
+                        <div class="pages">
+                            <strong class="label pages-label" id="paging-label">Page</strong>
+                            <ul aria-labelledby="paging-label" class="items pages-items">
+                                <li class="item current"><strong class="page"><span class="label">You're currently reading page</span> <span>1</span></strong></li>
+                                <li class="item">
+                                    <a class="page" href="#"><span class="label">Page</span> <span>2</span></a>
+                                </li>
+                                <li class="item">
+                                    <a class="page" href="#"><span class="label">Page</span> <span>3</span></a>
+                                </li>
+                                <li class="item">
+                                    <a class="page" href="#"><span class="label">Page</span> <span>4</span></a>
+                                </li>
+                                <li class="item">
+                                    <a class="page" href="#"><span class="label">Page</span> <span>5</span></a>
+                                </li>
+                                <li class="item pages-item-next">
+                                    <a class="action next" href="#" title="Next"><span class="label">Page</span> <span>Next</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="field limiter">
+                            <label class="label abs-visually-hidden" for="limiter"><span>Products Per Page</span></label>
+                            <div class="control">
+                                <a class="active" data-role="limiter" href="?product_list_limit=1">View 1</a> <a data-role="limiter" href="?product_list_limit=60">View 60</a> <a data-role="limiter" href="?product_list_limit=120">View 120</a>
+                            </div>
+                        </div>
+                    </div>
+                    `,
+                }
+            ],
+            properties: {
+                color: "#000"
+            }
         },
     ]
 };
