@@ -4,11 +4,16 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-preset-es2017": "^6.24.1",
+    "dotenv": "^5.0.0",
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "hex2rgb": "^2.2.0",
     "react-accessible-accordion": "^1.0.2",
+    "react-favicon": "^0.0.13",
     "react-prism": "^4.3.2",
+    "react-scrollspy": "^3.3.5",
     "react-stickynode": "^1.4.0",
     "react-syntax-highlighter": "^6.1.1",
     "styled-components": "^2.4.0"
