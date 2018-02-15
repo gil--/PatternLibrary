@@ -3,8 +3,23 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components';
+import Favicon from 'react-favicon';
 
-import './index.css'
+import data from '../data/settings';
+
+//import './index.css'
+
+const Stylesheets = () => {
+  const stylesheets = [];
+
+  data.resources.map(resource => {
+    if (resource.type == 'stylesheet') {
+      stylesheets.push({ "rel": "stylesheet", "href": resource.src });
+    }
+  });
+
+  return stylesheets;
+};
 
 const Header = () => (
   <div
@@ -36,15 +51,17 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Bryant Park Pattern Library - Something Digital"
+      title={data.title}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      link={ Stylesheets() }
     />
+    <Favicon url={data.favicon} />
     <div
       style={{
-        padding: '0px 1.0875rem 1.45rem',
+        padding: '0 0 1.45rem',
         paddingTop: 0,
       }}
     >
@@ -56,7 +73,11 @@ const TemplateWrapper = ({ children }) => (
 injectGlobal`
   :root {
     --backgroundColor: #cccccc;
-    --textColor: #141414;
+    --text-color: #141414;
+    --sg-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --sg-border-radius: 6px;
+    --sg-background-color: #eee;
+    --sg-border-color: #e7e7e7;
   }
 `;
 
