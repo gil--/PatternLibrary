@@ -28,6 +28,9 @@ const Title = styled.div`
     h2 {
         position: relative;
         margin: 0;
+        font-size: 30px;
+        font-family: var(--sg-font-family);
+        font-weight: 700;
 
         &:after {
             position: absolute;

@@ -11,11 +11,13 @@ export default GroupTitle
     Styles
 */
 const Title = styled.h3`
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin: 40px 0 30px;
+    padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
     font-size: 18px;
     text-transform: uppercase;
-    border-bottom: 2px solid #f5f2f0;
+    border-top: 5px solid var(--sg-background-color);
+    font-family: var(--sg-font-family);
+    font-weight: 700;
 `;

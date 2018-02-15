@@ -5,8 +5,8 @@ const Intro = props => (
     <Container>
         <Content>
             <h1>{props.title}</h1>
-            <div>{props.version}</div>
-            <a href={props.url} target="_blank">View on Github</a>
+            {/* <div>{props.version}</div> */}
+            <CTA href={props.url} target="_blank">View Staging Site</CTA>
         </Content>
     </Container>
 )
@@ -20,6 +20,7 @@ const Container = styled.section`
     height: 100vh;
     padding-top: 20px;
     padding-bottom: 20px;
+    box-sizing: border-box;
 `;
 
 const Content = styled.div`
@@ -34,6 +35,7 @@ const Content = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+    box-sizing: border-box;
     /* background-color: var(--backgroundColor); */
 
     &::before {
@@ -41,7 +43,7 @@ const Content = styled.div`
         position: absolute;
         width: 50%;
         height: 50%;
-        background: #e5e76c;
+        background: var(--color-secondary);
         right: 10%;
         top: 25%;
         z-index: -1;
@@ -58,12 +60,48 @@ const Content = styled.div`
         top: 0;
         z-index: -1;
         pointer-events: none;
-        outline: 10px solid #f06212;
+        outline: 10px solid var(--color-primary);
         outline-offset: -40px;
     }
 
+    @media screen and (max-width: 768px) {
+        &::after,
+        &::before {
+            /* display: none; */
+        }
+    }
+
     h1 {
-        mix-blend-mode: difference;
-        color: #ff761e;
+        /* mix-blend-mode: difference; */
+        color: black;
+        font-weight: 700;
+
+        @media screen and (min-width: 769px) {
+            font-size: 46px;
+        }
     }
 `;
+
+const CTA = styled.a`
+    margin-top: 10px;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    border-radius: 30px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 200px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: var(--color-primary);
+    }
+
+    &:visited {
+        color: inherit;
+    }
+`

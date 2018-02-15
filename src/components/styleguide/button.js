@@ -17,6 +17,7 @@ const ButtonStyle = styled.button`
     /*width: ${props => props.fullWidth ? '100%' : 'auto'};*/
     width: 100%;
     padding: 10px 25px;
+    color: var(--sg-text-color);
     background-color: white;
     border: 0;
     /* border-radius: 25px; */
@@ -29,6 +30,7 @@ const ButtonStyle = styled.button`
 
     &:hover,
     &:focus {
-        transform: scale(1.1);
+        box-shadow: 0 0 20px #0003;
+        border: 0;
     }
 `;
